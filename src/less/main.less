@@ -1,0 +1,124 @@
+// Theme
+// -------------------------------
+// Core variables and mixins
+
+
+@bg-nav: #2258a0;
+
+.placeholder(@color){
+	::-webkit-input-placeholder {color:@color;}
+	::-moz-placeholder          {color:@color;}
+	:-ms-input-placeholder      {color:@color;}
+}
+
+
+
+@import "variables.less";
+@import "mixins.less";
+
+// Vendor
+// -------------------------------
+
+// Bootstrap's styles
+@import "bootstrap.less";
+
+
+// Components
+// -------------------------------
+
+/*@import "foo.less";*/
+
+
+
+
+// Site-overrides
+// -------------------------------
+
+// Override Bootstrap in favor of GitHub styles
+pre {
+  background: #F8F8FF;
+}
+
+
+body {
+	background: url(img/bg/layout.jpg) 50% 0 no-repeat;
+}
+
+
+
+.topnav{
+	background: url(img/bg/topnav.png) 50% 0 no-repeat, @bg-nav;
+	@base-color: #fff;
+	color: @base-color;
+	a{color: @base-color;}
+	&-logo{
+		height: 85px;
+		width: 304px;
+		background: url(img/logo.png) 0 50% no-repeat;
+		color: rgba(0,0,0,0);
+		position: relative;
+		text-align: right;
+		font-style: italic;
+		h1{
+			font-family: cursive;
+			font-size: 40px;
+			top: 0; right: 0;
+			margin: 0;
+			position: absolute;
+		}
+		h2{
+			font-size: 18.5px;
+			margin: 0;
+			position: absolute;
+			bottom: 14px; right: 0;
+			color: #ffb7d4;
+		}
+	}
+	&-widget{
+		display: flex;
+		flex-flow: row wrap;
+		.separator{width: 100%;}
+		justify-content: space-between;
+	}
+	input[type=search]{
+		.placeholder(#fff);
+		border: none;
+		background: transparent;
+		&:focus{
+			outline: none;
+		}
+	}
+	>.container>div{
+		height: 118px;
+		padding-top: 15px;
+	}
+}
+
+.wrapper{
+	padding: 25px 25px 0;
+	margin: 50px auto;
+	background: rgba(0,0,0,.3);
+	border: rgba(255, 255, 255, .3) solid 3px;
+	border-radius: @border-radius-large;
+	label.control-label{
+		text-align: left;
+		color: #fff;
+		font-weight: 400;
+	}
+	a{
+		text-decoration: underline;
+		font-size: .8em;
+	}
+}
+
+.input-prepend{
+	position: relative;
+	label{
+		position: absolute;
+		line-height: 38px;
+		margin-left: 10px;
+		color: #aaa;
+		font-weight: 400;
+	}
+	input{text-align: right;}
+}
