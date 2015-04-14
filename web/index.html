@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="ru">
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,47 +16,53 @@
         <![endif]-->
 
 <div class="topnav">
-  <div class="container">
-    <div class="col-md-5">
-      <div class="topnav-logo">
-        <h1>Zefirdate</h1>
-        <h2>найди свою половину</h2>
-      </div>
+  <div class="topnav-container">
+    <div class="topnav-logo">
+      <h1>Zefirdate</h1>
+      <h2>найди свою половину</h2>
     </div>
-    <div class="col-md-4">
+    <div class="topnav-center">
       <div>
-        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-        <a href="#">%username%</a> / <a href="#">Выход</a>
+        <a href="#">
+          <span class="icon icon-user"></span>
+          %username%
+        </a> /
+        <a href="#">Выход</a>
         &nbsp;
-        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        <a href="#" class="icon icon-cog-y"></a>
       </div>
       <form class="form-inline">
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        <span class="icon icon-search"></span>
         <input type="search" placeholder="Поиск">
       </form>
     </div>
-    <div class="col-md-3">
-      <div class="topnav-widget">
-        <div>
-          Cr: <span>24 (0)</span>
-        </div>
-        <div>
-          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          <span>3</span>
-        </div>
-        <div>
-          <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
-          <span>5</span>
-        </div>
-        <div class="separator"></div>
-        <div>Статус</div>
-        <div>* Онлайн ^</div>
-        <div class="separator"></div>
+    <div class="topnav-right">
+      <ul class="topnav-stats">
+        <li>Cr: <strong>24 (0)</strong></li>
+        <li>
+          <span class="icon icon-envelope"></span>
+          <strong>3</strong>
+        </li>
+        <li>
+          <span class="icon icon-chat"></span>
+          <strong>5</strong>
+        </li>
+      </ul>
+      <div>
+        Статус
+        <span class="topnav-state">
+          <span class="icon mark icon-online"></span>
+          Онлайн
+          <span class="icon mark icon-submenu"></span>
+        </span>
       </div>
     </div>
   </div>
 </div>
 
+<div class="headline">
+  <h3 class="container">Анкета пользователя</h3>
+</div>
 
 <div class="search-wrap">
   <div class="container">
@@ -95,12 +101,12 @@
   </div>
   <div class="form-group">
     <div class="col-sm-12">
-      <button type="submit" class="btn btn-block btn-lg btn-primary">
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      <button type="submit" class="btn btn-block btn-lg btn-warning">
+        <span class="icon icon-search"></span>
         Найти половинку
       </button>
       <div style="text-align: right">
-        <a>Расширенный поиск</a>
+        <a href="#">Расширенный поиск</a>
       </div>
     </div>
   </div>
@@ -109,41 +115,14 @@
   </div>
 </div>
 
-
-
-
-
-<div class="container">
-  <div class="row marketing">
-    <div class="col-lg-6">
-      <h4>Subheading</h4>
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-      <h4>Subheading</h4>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-      <h4>Subheading</h4>
-      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    </div>
-
-    <div class="col-lg-6">
-      <h4>Subheading</h4>
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-      <h4>Subheading</h4>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-      <h4>Subheading</h4>
-      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <p>&copy; Company 2014</p>
-  </footer>
-
-</div>
-
+<footer class="app-footer">
+  <ul class="container">
+    <li class="copy">© <em>Zefirdate.com</em> all right reserved</li>
+    <li><a href="#">Ссылка 1</a></li>
+    <li><a href="#">Ссылка 2</a></li>
+    <li><a href="#">Ссылка 3</a></li>
+  </ul>
+</footer>
 
         <script src="/asset/app.js"></script>
 
