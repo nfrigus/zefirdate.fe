@@ -5,37 +5,10 @@
 
 @bg-nav: #2258a0;
 
-.placeholder(@color){
-	::-webkit-input-placeholder {color:@color;}
-	::-moz-placeholder          {color:@color;}
-	:-ms-input-placeholder      {color:@color;}
-}
-
-
 
 @import "variables.less";
 @import "mixins.less";
 
-
-#table{
-	.row(){
-		display: table;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		& > *{display: table-cell;}
-	}
-}
-#flex{
-	.row(){
-		display: flex;
-		justify-content: space-between;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		& > *{display: inline-block;}
-	}
-}
 
 // Vendor
 // -------------------------------
@@ -47,79 +20,11 @@
 // Components
 // -------------------------------
 
-/*@import "foo.less";*/
-
-
+@import "layout.less";
 
 
 // Site-overrides
 // -------------------------------
-
-// Override Bootstrap in favor of GitHub styles
-pre {
-  background: #F8F8FF;
-}
-
-
-body {
-	background: linear-gradient(45deg, #1f5aa7, #2c92ec , #1f5aa7, #2c92ec , #1f5aa7) ~"0 / 1024px 1024px";
-	min-width: 1024px;
-}
-
-
-
-.topnav{
-	@color-base: #fff;
-	color: @color-base;
-	background: linear-gradient(34deg, #3076ba, #1e5daf) ~"0 / 100% 100%";
-	box-shadow: 0 0 1px #000;
-	height: 118px;
-	line-height: 2em;
-	strong{
-		color: #fc0;
-		padding: .5em;
-	}
-	a{color: @color-base;}
-	input[type=search]{
-		.placeholder(#fff);
-		border: none;
-		background: transparent;
-		&:focus{
-			outline: none;
-		}
-	}
-
-
-	// layout
-	&-container{
-		#table.row();
-		height: 100%;
-		margin: 0 auto;
-		width: @container-lg;
-	}
-	&-logo{
-		background: url(img/logo.png) ~"0 15px / 304px 85px" no-repeat;
-		display: table-cell;
-		font-style: italic;
-		padding: 16px 46px 0 0;
-		text-align: right;
-		width: 350px;
-		h1{
-			font-family: cursive;
-			font-size: 40px;
-			margin: 0;
-			opacity: 0;
-		}
-		h2{
-			color: #ffb7d4;
-			font-size: 18.5px;
-			margin: 16px 5px 0 0;
-		}
-	}
-	&-right{width: 250px;}
-	&-stats{#flex.row();}
-	&-state{float: right;}
-}
 
 
 .headline{
@@ -127,31 +32,12 @@ body {
 	box-shadow: 0 0 1px #000;
 	color: #fff;
 	.container{
-		line-height: 60px;
 		font-weight: 400;
+		line-height: 60px;
+		margin: 0 auto;
 	}
 }
 
-.app-footer{
-	background: rgba(0, 0, 0, .5);
-	box-shadow: 0 0 1px #000;
-	.container{
-		line-height: 60px;
-		font-weight: 400;
-	}
-	li.copy{
-		float: left;
-		color: #b0afaf;
-		margin: 0;
-	}
-	li{
-		color: #fff;
-		float: right;
-		display: inline-block;
-		margin: 0 0 0 3em;
-	}
-
-}
 
 .icon{
 	&.mark{

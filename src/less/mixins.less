@@ -1,3 +1,30 @@
+.placeholder(@color){
+	::-webkit-input-placeholder {color:@color;}
+	::-moz-placeholder          {color:@color;}
+	:-ms-input-placeholder      {color:@color;}
+}
+#table{
+	.row(){
+		display: table;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		& > *{display: table-cell;}
+	}
+}
+#flex{
+	.row(){
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		& > *{display: inline-block;}
+	}
+}
+
+
+
 // Utilities
 @import "../../node_modules/bootstrap/less/mixins/hide-text.less";
 @import "../../node_modules/bootstrap/less/mixins/opacity.less";
