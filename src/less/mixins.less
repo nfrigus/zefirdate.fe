@@ -21,6 +21,21 @@
 		width: 100%;
 		& > *{display: inline-block;}
 	}
+	.justify(){
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		& > *{display: inline-block;}
+		&:after{
+			content: "";
+			display: inline-block;
+			height: 0;
+			width: 100%;
+		}
+	}
 }
 
 
@@ -61,3 +76,30 @@
 @import "../../node_modules/bootstrap/less/mixins/nav-vertical-align.less";
 @import "../../node_modules/bootstrap/less/mixins/grid-framework.less";
 @import "../../node_modules/bootstrap/less/mixins/grid.less";
+
+
+
+
+// nixinless
+.size(@wh) when (isnumber(extract(@wh,1))){width :extract(@wh,1)}
+.size(@wh) when (isnumber(extract(@wh,2))){height:extract(@wh,2)}
+
+
+#pos{
+	.abs(@pos){.set(@pos);position: absolute;}
+	.rel(@pos){.set(@pos);position: relative;}
+	.fix(@pos){.set(@pos);position: fixed;}
+
+	.abs(){position: absolute;}
+	.rel(){position: relative;}
+	.fix(){position: fixed;}
+
+	.set(@pos) when (isnumber(extract(@pos,1))){top   :extract(@pos,1)}
+	.set(@pos) when (isnumber(extract(@pos,2))){right :extract(@pos,2)}
+	.set(@pos) when (isnumber(extract(@pos,3))){bottom:extract(@pos,3)}
+	.set(@pos) when (isnumber(extract(@pos,4))){left  :extract(@pos,4)}
+}
+
+
+.marp()     {margin:0; padding:0; }
+.marp(@m,@p){margin:@m;padding:@p;}
