@@ -50,7 +50,27 @@ body {
 			margin: 16px 5px 0 0;
 		}
 	}
-	&-right{width: 250px;}
+	&-right{
+		width: 250px;
+		.dropdown-menu{
+			background: #dcdcdc;
+			border-radius: @border-radius-large;
+			color: #000;
+			left: auto;
+			right: 0;
+			width: 220px;
+			.title{
+				height: 40px;
+				line-height: 40px;
+				padding: 0 20px;
+			}
+			.descr{
+				background: #fff;
+				line-height: 1.5em;
+				padding: 10px 20px;
+			}
+		}
+	}
 	&-stats{#flex.row();}
 	&-state{float: right;}
 }
